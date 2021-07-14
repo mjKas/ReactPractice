@@ -21,9 +21,9 @@ function LakeResort({name}){
 function App(props){
   return(
     <div>
-      /**if else short form */
       {(props.season==="summer")?<BeachResort name="Welcome to Marble Beach Resort"/>:
       (props.season==="winter")?<LakeResort name="Lake Gregory Resort"/>:<h1>"Come back on winter or summer"</h1>}
+   (/*if else short form */)
     </div>
   );
   }

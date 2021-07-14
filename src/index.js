@@ -2,20 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Hello({library,message,number1,number2}){
-  return(
+const CityList = [
+  {id:"1", name: "Kandy" ,user:"Joe"},
+  {id:"2", name: "Colombo", user:"Jane"},
+  {id:"3", name: "Gall", user: "Sarah"}
+];
+
+function App({cities}){
+  return (
    <div>
-     <h1 id = "heading">Welcome to {library} !</h1>
-   <p>{message}</p>
-   Total = (number1+number2)
+     {cities.map(city =>(
+       <div>
+         <h2>{city.name}</h2>
+         <p>Acessed by: {city.user}</p>
+    </div>
+     ))}
    </div>
   );
-  }
+}
+  
 ReactDOM.render(
-   <Hello library = "React" 
-   message = "Have Fun"
-   number1 = {20}
-   number2 = {10}/>,
+    <App cities = { CityList} />,
     document.getElementById('root')
 );
 

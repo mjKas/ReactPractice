@@ -4,7 +4,10 @@ import './index.css';
 
 
 ReactDOM.render(
-  React.createElement("Div",{style:{color:"blue"}},React.createElement("h1",null,"Hello")),
+  /*#__PURE__*/
+React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Cheese cake"), 
+/*#__PURE__*/React.createElement("li", null, "Brownies"), 
+/*#__PURE__*/React.createElement("li", null, "Tiramasu")),
   document.getElementById('root')
 );
 

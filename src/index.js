@@ -1,38 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
+/**useState hook is imported */
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function BeachResort({name}){
-  return(
-    <div>
-      <h1>Welcome to {name}!</h1>
-    </div>
-  );
-}
 
-function LakeResort({name}){
+function App(){
+  const[status,setStatus] = useState("Open");
   return(
     <div>
-      <h1>Welcome to {name}</h1>
-    </div>
-  );
-}
-
-function App(props){
-  return(
-    <div>
-      {(props.season==="summer")?<BeachResort name="Welcome to Marble Beach Resort"/>:
-      (props.season==="winter")?<LakeResort name="Lake Gregory Resort"/>:<h1>"Come back on winter or summer"</h1>}
-   (/*if else short form */)
-    </div>
-  );
+      <h1>Status: {status}</h1>
+      <button onClick={() => setStatus("Open") }>Open</button>
+      <button onClick={() => setStatus("Closed")}>Closed</button>
+      <button onClick={() => setStatus("Resume")}>Resume</button>
+      </div>
+      
+  );   
   }
   
 
-  
 ReactDOM.render(
-    <App season = "summer"/>, /*here in app season we pass what season if it is winter or summer */
-    document.getElementById('root')
+    <App/> ,
+    document.getElementById('root') 
 );
-
-
+ 
+  

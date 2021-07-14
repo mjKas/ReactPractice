@@ -12,7 +12,7 @@ function App({cities}){
   return (
    <div>
      {cities.map(city =>(
-       <div>
+       <div key={city.id}>
          <h2>{city.name}</h2>
          <p>Acessed by: {city.user}</p>
     </div>
